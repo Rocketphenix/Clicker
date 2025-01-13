@@ -1,0 +1,124 @@
+[
+	{
+		"id": 1,
+		"nom": "Blob",
+		"vieMax": 20,
+		"argentMin": 1,
+		"argentMax": 10,
+		"imageEnnemie": "Blob/Normal/Blob.png",
+		"imageBlesser": "Blob/Normal/Blob_Hit.png",
+		"TempsMax": 2000,
+		"isBoss": false
+	},
+	{
+		"id": 2,
+		"nom": "Blob Eau",
+		"vieMax": 20,
+		"argentMin": 1,
+		"argentMax": 10,
+		"imageEnnemie": "Blob/Eau/BlobEau.png",
+		"imageBlesser": "Blob/Eau/BlobEau_Hit.png",
+		"TempsMax": 2000,
+		"isBoss": false
+	},
+	{
+		"id": 3,
+		"nom": "Blob Electrique",
+		"vieMax": 20,
+		"argentMin": 1,
+		"argentMax": 10,
+		"imageEnnemie": "Blob/Electrique/BlobElectrique.png",
+		"imageBlesser": "Blob/Electrique/BlobElectrique_Hit.png",
+		"TempsMax": 2000,
+		"isBoss": false
+	},
+	{
+		"id": 4,
+		"nom": "Blob Glace",
+		"vieMax": 20,
+		"argentMin": 1,
+		"argentMax": 10,
+		"imageEnnemie": "Blob/Glace/BlobGlace.png",
+		"imageBlesser": "Blob/Glace/BlobGlace_Hit.png",
+		"TempsMax": 2000,
+		"isBoss": false
+	},
+	{
+		"id": 5,
+		"nom": "Blob Lave",
+		"vieMax": 20,
+		"argentMin": 1,
+		"argentMax": 10,
+		"imageEnnemie": "Blob/Lave/BlobLave.png",
+		"imageBlesser": "Blob/Lave/BlobLave_Hit.png",
+		"TempsMax": 2000,
+		"isBoss": false
+	},
+	{
+		"id": 6,
+		"nom": "Blob Lumiere",
+		"vieMax": 20,
+		"argentMin": 1,
+		"argentMax": 10,
+		"imageEnnemie": "Blob/Lumiere/BlobLumiere.png",
+		"imageBlesser": "Blob/Lumiere/BlobLumiere_Hit.png",
+		"TempsMax": 2000,
+		"isBoss": false
+	},
+
+	{
+		"id": 7,
+		"nom": "Blob Poison",
+		"vieMax": 20,
+		"argentMin": 1,
+		"argentMax": 10,
+		"imageEnnemie": "Blob/Poison/BlobPoison.png",
+		"imageBlesser": "Blob/Poison/BlobPoison_Hit.png",
+		"TempsMax": 2000,
+		"isBoss": false
+	},
+	{
+		"id": 8,
+		"nom": "Blob Roche",
+		"vieMax": 20,
+		"argentMin": 1,
+		"argentMax": 10,
+		"imageEnnemie": "Blob/Roche/BlobRoche.png",
+		"imageBlesser": "Blob/Roche/BlobRoche_Hit.png",
+		"TempsMax": 2000,
+		"isBoss": true
+	},
+	{
+		"id": 9,
+		"nom": "Blob Sable",
+		"vieMax": 20,
+		"argentMin": 1,
+		"argentMax": 10,
+		"imageEnnemie": "Blob/Sable/BlobSable.png",
+		"imageBlesser": "Blob/Sable/BlobSable_Hit.png",
+		"TempsMax": 2000,
+		"isBoss": true
+	},
+	{
+		"id": 10,
+		"nom": "Blob Tenebre",
+		"vieMax": 20,
+		"argentMin": 1,
+		"argentMax": 10,
+		"imageEnnemie": "Blob/Tenebre/BlobTenebre.png",
+		"imageBlesser": "Blob/Tenebre/BlobTenebre_Hit.png",
+		"TempsMax": 2000,
+		"isBoss": true
+	},
+	{
+		"id": 11,
+		"nom": "Blob Terre",
+		"vieMax": 20,
+		"argentMin": 1,
+		"argentMax": 10,
+		"imageEnnemie": "Blob/Terre/BlobTerre.png",
+		"imageBlesser": "Blob/Terre/BlobTerre_Hit.png",
+		"TempsMax": 2000,
+		"isBoss": true
+	}
+]

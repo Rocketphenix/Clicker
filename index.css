@@ -1,0 +1,734 @@
+body {
+	background-color: #111;
+	color: #eee;
+	font-family: "Roboto Slab", serif;
+	font-size: 20px;
+	display: inline-block;
+	user-select: none;
+}
+
+/* CSS pour le clicker */
+/* Partie zone Principal */
+#stat {
+	position: absolute;
+	color: white;
+	top: 75%;
+	text-align: center;
+	font-size: 30px;
+	line-height: 0.1;
+	background-color: #25252571;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#zoneDeClick {
+	position: absolute;
+	top: 0;
+	left: 320px;
+	width: calc(100% - 320px - 450px);
+	height: calc(60% - 5px);
+	z-index: -1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-repeat: round;
+}
+.clicable {
+	border: none;
+	height: 60%;
+	width: 60%;
+	background: none;
+}
+#monster {
+	max-height: 100%;
+	max-width: 100%;
+}
+#labelTimer {
+	position: absolute;
+	top: 0px;
+}
+#labelVie {
+	z-index: 1;
+	position: absolute;
+	top: 30px;
+	color: black;
+}
+#fondTimer {
+	position: absolute;
+	width: 500px;
+	height: 10px;
+	top: 25px;
+	background: black;
+	border-radius: 20px;
+	overflow: hidden;
+}
+#timer {
+	width: 100%;
+	height: 100%;
+}
+.fondVie {
+	position: absolute;
+	width: 500px;
+	height: 25px;
+	top: 50px;
+
+	text-align: center;
+	background: white;
+	border-radius: 20px;
+	overflow: hidden;
+}
+#vie {
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+
+	border-left: 1px solid #09c;
+	background: #09c;
+}
+#affichageNombreDeMonstreTuee {
+	position: absolute;
+	top: 75px;
+}
+/* Partie zone Bonus */
+aside {
+	position: absolute;
+	height: calc(100% - 20px);
+	width: 200px;
+	min-width: 300px;
+	left: 0;
+	top: 0;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: baseline;
+
+	z-index: 2;
+	background-color: rgb(61, 61, 61);
+	overflow: hidden;
+}
+.bonus {
+	background-color: rgb(46, 46, 46);
+	padding-left: 5px;
+	padding-top: 4px;
+}
+aside .multiple {
+	width: 100%;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+aside .bonus {
+	align-self: center;
+	font-size: 15px;
+	overflow: auto;
+	width: 93%;
+
+	scrollbar-color: #346abf white; /* ascensseur bleu sur fond blanc */
+}
+aside .bonus button {
+	font-size: 15px;
+	width: 97%;
+	margin-bottom: 4%;
+	border: none;
+
+	background-color: rgb(255, 255, 255);
+	box-shadow: 3px 4px black;
+	overflow: hidden;
+}
+aside .bonus button:active {
+	box-shadow: none;
+	transform: translate(3px, 4px);
+}
+aside .bonus button:disabled {
+	background-color: #ffffff7e;
+	color: rgba(209, 0, 0, 0.74);
+}
+.AchatPuissanceClick {
+	height: 100%;
+	width: 255px;
+	margin-top: -1px;
+	margin-left: -6px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.ImgbtnClick {
+	margin: 0;
+	height: 100%;
+	width: 50px;
+	padding: 5px;
+	padding-left: -5px;
+	border-right: 2px solid rgb(85, 39, 2);
+}
+.textPrixClick {
+	position: relative;
+	left: -10px;
+	top: 10px;
+}
+.lvlClick {
+	position: relative;
+	background: rgb(2, 97, 2);
+	color: #eee;
+	margin: 0;
+	padding: 5px;
+	padding-left: 10px;
+	margin-left: -8px;
+	margin-bottom: -1px;
+	width: 100%;
+	height: 20%;
+}
+aside .bonus button:disabled .lvlClick {
+	background: rgba(1, 73, 1, 0.575);
+	color: rgb(161, 2, 2);
+}
+.zoneAchatBonus {
+	height: 100%;
+	width: 255px;
+	margin-top: -1px;
+	margin-left: -6px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.lvlBonus {
+	background: rgb(172, 0, 0);
+	color: #eee;
+	margin: 0;
+	padding: 5px;
+	padding-left: 10px;
+	margin-left: -8px;
+	margin-bottom: -1px;
+	width: 100%;
+	height: 20%;
+}
+aside .bonus button:disabled .lvlBonus {
+	background: rgba(102, 1, 1, 0.575);
+	color: rgb(161, 2, 2);
+}
+.ImgbtnClickRankSuivant {
+	width: 50px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+.textPrixRankSuivant {
+	position: relative;
+	top: 10px;
+}
+.lvlClickRankSuivant {
+	background: rgb(2, 97, 2);
+	color: #eee;
+	margin: 0;
+	padding: 5px;
+	padding-left: 10px;
+	margin-left: -8px;
+	margin-bottom: -1px;
+	width: 100%;
+	height: 20%;
+}
+aside .multiple button {
+	max-height: 75%;
+	height: 40px;
+	min-height: 5px;
+	min-width: 22%;
+	border: none;
+}
+aside .multiple button:last-child {
+	border-right: none;
+}
+aside .multiple button:hover {
+	background-color: #35779d;
+}
+.active {
+	background-color: #004369;
+	color: #eee;
+}
+aside .multiple button:active {
+	background-color: #004369;
+	color: #eee;
+}
+/* Global */
+.bonus::-webkit-scrollbar {
+	width: 15px;
+}
+/* Ascenseur */
+.bonus::-webkit-scrollbar-thumb {
+	background: #346abf;
+}
+
+/* Boutons */
+.bonus::-webkit-scrollbar-button:single-button {
+	display: block;
+	border-style: solid;
+	height: 20px;
+	width: 16px;
+}
+/* Haut */
+.bonus::-webkit-scrollbar-button:single-button:vertical:decrement {
+	border-width: 0 8px 12px 8px;
+	border-color: #346abf transparent;
+}
+.bonus::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+	border-color: transparent transparent #1f3f72 transparent;
+}
+/* Bas */
+.bonus::-webkit-scrollbar-button:single-button:vertical:increment {
+	border-width: 12px 8px 0 8px;
+	border-color: #346abf transparent transparent transparent;
+}
+.bonus::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+	border-color: #1f3f72 transparent transparent transparent;
+}
+
+/* Partie zone Information */
+footer {
+	position: absolute;
+	border-top: 5px solid rgb(85, 39, 2);
+	background-color: #978017;
+
+	top: calc(60% - 15px);
+	left: 320px;
+	width: calc(100% - 340px);
+	height: 40%;
+	padding: 10px;
+	padding-top: 0px;
+	overflow: auto;
+}
+#textDegatsBonus {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 85%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: stretch;
+}
+footer article {
+	background: #09c;
+	width: 28%;
+	height: 65px;
+	box-shadow: 2px 2px #111;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+}
+.fichesPuissanceBonus {
+	background: rgb(190, 114, 1);
+}
+footer article img {
+	width: 53px;
+	height: 80%;
+	padding-left: 1px;
+	padding-top: 1px;
+	margin-top: 3px;
+	margin-left: 5px;
+	margin-right: 3%;
+	float: left;
+
+	background: #098b60;
+	border: 2px solid rgb(85, 39, 2);
+	box-shadow: 2px 2px #111, 2px 2px #111 inset;
+}
+.Imgbonus {
+	background: rgb(172, 190, 1);
+}
+
+#AffichageZone {
+	position: absolute;
+	bottom: 10px;
+	height: 50px;
+	width: calc(100% - 20px);
+	background-color: #004369;
+}
+.BtnChangementZone {
+	border: none;
+	margin-top: 10px;
+	margin-left: 10px;
+	height: calc(100% - 20px);
+	width: 30px;
+	border-radius: 100%;
+}
+/* Partie zone personnage */
+section {
+	position: absolute;
+
+	top: 0;
+	right: 0;
+	width: 500px;
+	height: calc(60% - 15px);
+}
+.btnSwitchMenu {
+	float: left;
+	display: flex;
+	flex-direction: column;
+	width: 50px;
+	height: 100%;
+}
+.btnSwitchMenu button {
+	width: 100%;
+	height: 50px;
+	border: rgb(85, 39, 2) 3px solid;
+	border-radius: 10px 0 0 10px;
+}
+#btnEcranPerso {
+	cursor: pointer;
+	background-color: #179782;
+	background-image: url(Image/Item/Baton.png);
+	background-size: 85%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#btnEcranPerso:hover {
+	background-color: #22cfb2;
+}
+#btnEcranSucces {
+	cursor: pointer;
+	background-color: #179751;
+	background-image: url(Image/Ennemie/Blob/Glace/BlobGlace.png);
+	background-size: 85%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#btnEcranSucces:hover {
+	background-color: #21c96c;
+}
+#btnCompte {
+	width: 50px;
+	position: absolute;
+	background-image: url(Image/Compte.png);
+	background-size: 85%;
+	background-repeat: no-repeat;
+	background-position: center;
+	bottom: 0;
+	cursor: pointer;
+	background-color: #6f7070;
+}
+#btnCompte img {
+	width: 85%;
+	position: absolute;
+	left: 4px;
+	top: 3px;
+}
+#btnCompte:hover {
+	background-color: #a3a3a3;
+}
+#ecranDroit {
+	position: absolute;
+	border-left: 5px solid rgb(85, 39, 2);
+	background-color: #179782;
+	overflow: auto;
+	right: 0;
+	width: 450px;
+	height: 100%;
+}
+.fichesSucces {
+	background-color: #004369;
+	width: calc(100% - 12px);
+	height: 65px;
+	box-shadow: 2px 2px #111;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-bottom: 15px;
+	display: flex;
+}
+.ImgSucces {
+	width: 53px;
+	height: 80%;
+	padding-left: 1px;
+	padding-top: 1px;
+	margin-top: 3px;
+	margin-left: 5px;
+	margin-right: 3%;
+
+	background: #098b60;
+	border: 2px solid rgb(85, 39, 2);
+	box-shadow: 2px 2px #111, 2px 2px #111 inset;
+}
+#changementPage {
+	margin-top: 20px;
+	margin-left: 7%;
+	border: none;
+	text-decoration: underline;
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+.btnCategorieSucces {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 50px;
+}
+.btnCategorieSucces button {
+	width: 50px;
+	height: 100%;
+	border: rgb(97, 95, 93) 3px solid;
+	background-color: rgb(97, 95, 93);
+	border-bottom: none;
+	border-radius: 10px 10px 0 0;
+
+	cursor: pointer;
+	background-size: 85%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#btnCategorieClick {
+	height: 105%;
+	background-color: #179751;
+	background-image: url(Image/Item/Baton.png);
+}
+#btnCategorieNiveauClick {
+	background-image: url(Image/Ennemie/Blob/Glace/BlobGlace.png);
+}
+#btnCategorieBonus1 {
+	background-image: url(Image/Ennemie/Blob/Electrique/BlobElectrique.png);
+}
+#btnCategorieBonus2 {
+	background-image: url(Image/Ennemie/Blob/Electrique/BlobElectrique.png);
+}
+#btnCategorieBonus3 {
+	background-image: url(Image/Ennemie/Blob/Electrique/BlobElectrique.png);
+}
+#btnCategorieBonus4 {
+	background-image: url(Image/Ennemie/Blob/Electrique/BlobElectrique.png);
+}
+#menuCategorieSucces {
+	border-top: rgb(97, 95, 93) 3px solid;
+}
+/* Partie menu Navigation */
+nav {
+	position: absolute;
+	width: 100%;
+	height: 30px;
+	left: 0;
+	bottom: 0;
+	display: none;
+	flex-direction: row;
+	justify-content: space-between;
+	border-top: 5px solid rgb(85, 39, 2);
+}
+nav button {
+	flex-grow: 1;
+	border: none;
+}
+#menuBonus {
+	background-color: rgb(61, 61, 61);
+}
+#menuMenu {
+	background-color: #978017;
+}
+#menuPerso {
+	background-color: #09c;
+}
+@media only screen and (max-width: 1500px) {
+	input {
+		height: 20px;
+	}
+
+	#zoneDeClick {
+		width: 100%;
+		height: 100%;
+		left: 0;
+	}
+	.fondVie {
+		width: 75%;
+		height: 25px;
+	}
+	#fondTimer {
+		width: 75%;
+		height: 10px;
+	}
+
+	aside {
+		position: absolute;
+		display: none;
+		top: 0;
+		bottom: 0;
+		margin-bottom: 35px;
+		height: calc(100% - 55px);
+	}
+	footer {
+		display: none;
+		width: calc(100% - 20px);
+		height: calc(49% - 23px);
+		top: calc(51% - 25px);
+		left: 0;
+	}
+	footer article {
+		margin-top: 10px;
+		margin-left: 8px;
+	}
+	section {
+		display: none;
+		height: calc(100% - 34px);
+	}
+
+	nav {
+		display: flex;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	aside {
+		position: absolute;
+		display: none;
+		top: 0;
+		bottom: 0;
+		margin-bottom: 35px;
+		width: 100%;
+		padding: 0;
+		height: calc(100% - 34px);
+	}
+	aside .multiple button {
+		margin-top: 7px;
+	}
+	aside .bonus {
+		margin-left: 5px;
+		width: 95%;
+	}
+
+	#ecranDroit {
+		width: calc(100% - 50px);
+	}
+	#btnCompte {
+		bottom: 34px;
+	}
+	footer {
+		display: none;
+		width: 100%;
+		height: calc(100% - 34px);
+		padding: 0;
+		top: 0;
+		left: 0;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		border: none;
+	}
+	footer article {
+		margin-top: 10px;
+		margin-left: 15px;
+		width: 88%;
+		padding-bottom: 2.5px;
+	}
+	footer article:last-child {
+		margin-bottom: 6px;
+	}
+
+	section {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+/* CSS pour la connexion au clicker */
+/* Connexion au Compte */
+#partieConnection {
+	user-select: auto;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+#partieConnection h1 {
+	background-color: rgb(255, 195, 0);
+	color: black;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	margin-top: 0;
+	padding-left: 18px;
+	max-height: 50px;
+}
+.formulaireConnexion {
+	color: #111;
+	display: flex;
+	flex-direction: column;
+
+	margin-left: 7%;
+	width: 80%;
+}
+input {
+	margin-bottom: 20px;
+}
+#btnConnexion {
+	height: 50px;
+	border: none;
+	background-color: rgb(255, 195, 0);
+	box-shadow: 3px 4px black;
+	cursor: pointer;
+}
+#btnConnexion:hover {
+	box-shadow: none;
+	transform: translate(3px, 4px);
+}
+#erreur {
+	color: red;
+	font-size: 15px;
+}
+
+/* Creation d'un compte */
+#partieInscription {
+	user-select: auto;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+#partieInscription h1 {
+	background-color: rgb(255, 195, 0);
+	color: black;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	margin-top: 0;
+	padding-left: 18px;
+	max-height: 50px;
+}
+.formulaireInscription {
+	color: #111;
+	display: flex;
+	flex-direction: column;
+
+	margin-left: 7%;
+	width: 80%;
+}
+#btnInscription {
+	height: 50px;
+	border: none;
+	background-color: rgb(255, 195, 0);
+	box-shadow: 3px 4px black;
+}
+#btnInscription:hover {
+	box-shadow: none;
+	transform: translate(3px, 4px);
+	cursor: pointer;
+}
+/* Deconnexion du compte */
+#partieDeconnexion {
+	user-select: auto;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+#partieDeconnexion h1 {
+	background-color: rgb(255, 195, 0);
+	color: black;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	margin-top: 0;
+	padding-left: 18px;
+	max-height: 50px;
+}
+#btnDeconnexion {
+	height: 50px;
+	border: none;
+	background-color: rgb(255, 195, 0);
+	box-shadow: 3px 4px black;
+	cursor: pointer;
+}
+#btnDeconnexion:hover {
+	box-shadow: none;
+	transform: translate(3px, 4px);
+}

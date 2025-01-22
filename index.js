@@ -1142,7 +1142,7 @@ if (connexion === null) {
 	//******************************************************//
 	//	Le compte n'existe pas initialise toute les données	//
 	//******************************************************//
-	argent = 2000000;
+	argent = 0;
 	nbrClick = 0;
 	niveauClick = 0;
 	niveauRank = 0;
